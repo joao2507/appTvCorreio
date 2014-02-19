@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.bossacriativa.correio.tv" version="1.0.0">
+
+    <name>TV Correio</name>
+
+    <description> </description>
+
+    <author email="contato@bossacriativa.com.br" href="http://www.bossacriativa.com.br">
+        Bossa Criativa
+    </author>
+
+    <gap:splash gap:density="ldpi" gap:platform="android" src="splash/android/ldpi.png"/>
+    <gap:splash gap:density="mdpi" gap:platform="android" src="splash/android/mdpi.png"/>
+    <gap:splash gap:density="hdpi" gap:platform="android" src="splash/android/hdpi.png"/>
+    <gap:splash gap:density="xhdpi" gap:platform="android" src="splash/android/xhdpi.png"/>
+
+    <gap:splash height="480" src="splash/ios/Default.png" width="320"/>
+    <gap:splash height="960" src="splash/ios/Default_at_2x.png" width="640"/>
+    <gap:splash height="1136" src="splash/ios/Default_iphone5.png" width="640"/>
+
+    <icon src="icons/default.png"/>
+
+    <icon gap:platform="ios" height="57" src="icons/ios/default.png" width="57"/>
+    <icon gap:platform="ios" height="72" src="icons/ios/icon-72.png" width="72"/>
+    <icon gap:platform="ios" height="114" src="icons/ios/icon_at_2x.png" width="114"/>
+
+    <icon gap:density="ldpi" gap:platform="android" src="icons/android/ldpi.png"/>
+    <icon gap:density="mdpi" gap:platform="android" src="icons/android/mdpi.png"/>
+    <icon gap:density="hdpi" gap:platform="android" src="icons/android/hdpi.png"/>
+    <icon gap:density="xhdpi" gap:platform="android" src="icons/android/xhdpi.png"/>
+
+    <preference name="permissions" value="none"/>
+
+    <feature name="http://api.phonegap.com/1.0/network"/>
+    
+    <gap:platform name="android"/>
+    <gap:platform name="ios"/>
+    
+    <preference name="phonegap-version" value="3.1.0"/>
+    <preference name="android-minSdkVersion" value="5"/>
+    
+    <preference name="orientation" value="portrait"/>
+    <preference name="fullscreen" value="true"/>
+    <preference name="target-device" value="universal"/>
+    <preference name="prerendered-icon" value="true"/>
+    <preference name="exit-on-suspend" value="true"/>
+    <preference name="android-installLocation" value="auto"/>
+    
+    <gap:plugin name="org.apache.cordova.dialogs"/>
+    <gap:plugin name="org.apache.cordova.network-information"/>
+    
+    <access origin="*"/>
+
+</widget>
