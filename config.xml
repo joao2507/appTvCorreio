@@ -18,7 +18,7 @@
     <gap:splash height="960" src="splash/ios/Default_at_2x.png" width="640"/>
     <gap:splash height="1136" src="splash/ios/Default_iphone5.png" width="640"/>
 
-    <icon src="icons/default.png"/>
+    <icon src="icons/ios/icon-57.png"/>
 
     <icon gap:platform="ios" height="57" src="icons/ios/icon-57.png" width="57"/>
     <icon gap:platform="ios" height="72" src="icons/ios/icon-72.png" width="72"/>

@@ -25,12 +25,25 @@
     <body> 
 
         <div data-role="view" id="aovivo" data-title="AoVivo">
-            <div data-role="header">
+            <header data-role="header">
                 <div data-role="navbar">
-                    <img src="img/logomini.png" data-align="left" id="image-header-navbar" />
-                    <a data-align="right" data-role="button" id="help-button" href="#help">?</a>
+                    <a data-role="button" data-rel="drawer" href="#menu" data-icon="drawer" data-align="left"></a>
+                    <img src="img/logo-hd.png" data-align="right" />
                 </div>
-            </div>
+            </header>
+        </div>
+        
+        <div data-role="drawer" id="menu" style="width: 250px" data-views="['inicio',]">
+            <ul data-role="listview" data-type="group">
+                <li>
+                    <ul>
+                        <li><a href="#aovivo" data-transition="none">Início</a></li>
+                        <li><a href="#sobre-tv" data-transition="none">Sobre a TV Correio</a></li>
+                        <li><a href="#contato-comercial" data-transition="none">Contato Comercial</a></li>
+                        <li><a href="#sobre-app" data-transition="none">Sobre o APP</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </body>
 </html>
