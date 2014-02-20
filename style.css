@@ -1,15 +1,36 @@
 *{font-family: 'PT Sans', sans-serif !important;}
+
+@font-face {
+    font-family: "IconsBossa1";
+    src: url("img/fonts/icon-menu/font/icons.woff") format("woff"),
+        url("img/fonts/icon-menu/font/icons.ttf") format("truetype");
+}
+
+.km-menu-icon:after,
+.km-menu-icon:before
+{
+    content: "\E800";
+    font: 1.6em/.7em "IconsBossa1";
+}
+
 .km-content{background-color: #fff !important;}
+.km-header{
+    z-index: 2;position: relative;
+    background: #ae2d27 url(img/brilho-navbar.png) no-repeat center top;
+    background-size: 100% 100%;
+}
 .km-header .km-navbar{
     height: 54px !important;
     color: #fff !important;
-    background: #ae2d27 url(img/bg-navbar.png) no-repeat center top;
+    background: url(img/bg-navbar.png) no-repeat center top;
     border-bottom: none !important;
     border-width: 0 !important;
+    z-index: 1;
+    position: relative;
 }
 
 .km-flat .km-loader, .km-flat .km-rowinsert, .km-flat .km-state-active, .km-flat .km-scroller-pull, .km-flat .k-slider-selection, .km-flat .km-touch-scrollbar, .km-flat .km-pages .km-current-page, .km-flat .k-slider .k-draghandle, .km-flat .k-slider .k-draghandle:hover, .km-flat .km-tabstrip .km-state-active, .km-flat .km-scroller-refresh.km-load-more, .km-flat .km-popup .k-state-hover, .km-flat .km-popup .k-state-focused, .km-flat .km-popup .k-state-selected, .km-flat .km-actionsheet>li>a:active, .km-flat .km-actionsheet>li>a:hover, .km-flat li.km-state-active .km-listview-link, .km-flat li.km-state-active .km-listview-label, .km-flat .km-listview-label input[type=radio]:checked, .km-flat .km-listview-label input[type=checkbox]:checked{
-    background-color: #3157a4 !important;color: #fff !important;
+    background-color: #ae2d27 !important;color: #fff !important;
 }
 
 .clear {
@@ -22,3 +43,22 @@
 }
 .left{float:left;}
 .right{float:right;}
+
+.button-menu{background: none !important;border: none !important;}
+.brilho-navbar{display: block;width: 100%;height: 100%;background: url(img/brilho-navbar.png) no-repeat center top;}
+
+#menu .km-content{background-color: #511c0e !important;}
+#menu .km-group-title{display: none;}
+#menu .km-list{margin: 1.5em;}
+#menu li{
+    background: none !important;
+    border-width: 0 !important;
+    color: #fff;
+    text-transform: uppercase;
+    border:none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+#menu .km-list li{
+    border-bottom: #713323 1px solid !important;
+}

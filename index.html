@@ -27,13 +27,15 @@
         <div data-role="view" id="aovivo" data-title="AoVivo">
             <header data-role="header">
                 <div data-role="navbar">
-                    <a data-role="button" data-rel="drawer" href="#menu" data-icon="drawer" data-align="left"></a>
-                    <img src="img/logo-hd.png" data-align="right" />
+                    <div class="brilho-navbar">
+                        <a data-role="button" class="button-menu" data-rel="drawer" href="#menu" data-icon="menu-icon" data-align="left"></a>
+                        <img src="img/logo-hd.png" data-align="right" />
+                    </div>
                 </div>
             </header>
         </div>
-        
-        <div data-role="drawer" id="menu" style="width: 250px" data-views="['inicio',]">
+
+        <div data-role="drawer" id="menu" style="width: 250px" data-views="['aovivo',]">
             <ul data-role="listview" data-type="group">
                 <li>
                     <ul>
