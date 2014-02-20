@@ -24,7 +24,48 @@
     </head> 
     <body> 
 
-        <div data-role="view" id="aovivo" data-title="AoVivo">
+        <div data-role="view" id="aovivo" data-title="AoVivo" data-layout="tema">
+            <div id="player">
+                <a id="button-play"></a>
+            </div>
+            <div id="banner">
+                <center><img src="http://placehold.it/320x240" /></center>
+            </div>
+        </div>
+        
+        <div data-role="view" id="sobre-tv" data-title="Sobre a TV Correio" data-layout="tema" class="interna">
+            <h1>Sobre a TV Correio</h1>
+            <p>A TV Correio integra o Sistema Correio, maior Sistema de Comunicação do estado da Paraíba, 
+                composta por 23 empresas de comunicação, dentre elas: 02 emissoras de TV, 16 emissoras de 
+                Rádio, 02 Jornais, 02 Revistas, 01 Portal e a Fundação Solidariedade, braço social do Sistema 
+                Correio. E é afiliada da Rede Record, emissora que possui 24 horas de informação em TV 
+                aberta, 173 milhões de telespectadores potenciais em todo o Brasil.</p>
+            <p>Com a maior programação local do estado composta por 13 programas locais, a TV Correio 
+                mantém a liderança em vários horários, com mais que a soma de todos os concorrentes. 
+                Além de manter a quantidade de 63 horas mensais que a programação local fica em 1º lugar. 
+                A TV Correio é a emissora que possui a maior cobertura do estado com 85% de alcance nos 
+                municípios da Paraíba.</p>
+        </div>
+        
+        <div data-role="view" id="sobre-app" data-title="Sobre o APP" data-layout="tema" class="interna">
+            <h1>Sobre o App</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
+                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
+                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo 
+                consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie 
+                consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto 
+                odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait 
+                nulla facilisi. </p>
+        </div>
+        
+        <div data-role="view" id="contato-comercial" data-title="Contato Comercial" data-layout="tema" class="interna">
+            <h1>Contato Comercial</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
+                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
+                quis nostrud exerci tation . </p>
+        </div>
+
+        <div data-role="layout" data-id="tema">
             <header data-role="header">
                 <div data-role="navbar">
                     <div class="brilho-navbar">
@@ -35,7 +76,7 @@
             </header>
         </div>
 
-        <div data-role="drawer" id="menu" style="width: 250px" data-views="['aovivo',]">
+        <div data-role="drawer" id="menu" style="width: 250px" data-views="['aovivo','sobre-tv','contato-comercial','sobre-app']">
             <ul data-role="listview" data-type="group">
                 <li>
                     <ul>
