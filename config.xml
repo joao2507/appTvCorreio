@@ -9,14 +9,14 @@
         Bossa Criativa
     </author>
 
-    <!--<gap:splash gap:density="ldpi" gap:platform="android" src="splash/android/ldpi.png"/>
-    <gap:splash gap:density="mdpi" gap:platform="android" src="splash/android/mdpi.png"/>
-    <gap:splash gap:density="hdpi" gap:platform="android" src="splash/android/hdpi.png"/>
-    <gap:splash gap:density="xhdpi" gap:platform="android" src="splash/android/xhdpi.png"/>
+    <gap:splash gap:density="ldpi" gap:platform="android" src="splash/android/screen-ldpi-portrait.png"/>
+    <gap:splash gap:density="mdpi" gap:platform="android" src="splash/android/screen-mdpi-portrait.png"/>
+    <gap:splash gap:density="hdpi" gap:platform="android" src="splash/android/screen-hdpi-portrait.png"/>
+    <gap:splash gap:density="xhdpi" gap:platform="android" src="splash/android/screen-xhdpi-portrait.png"/>
 
     <gap:splash height="480" src="splash/ios/Default.png" width="320"/>
     <gap:splash height="960" src="splash/ios/Default_at_2x.png" width="640"/>
-    <gap:splash height="1136" src="splash/ios/Default_iphone5.png" width="640"/>-->
+    <gap:splash height="1136" src="splash/ios/Default_iphone5.png" width="640"/>
 
     <icon src="icons/ios/icon-57.png"/>
 
@@ -46,6 +46,8 @@
     <preference name="prerendered-icon" value="true"/>
     <preference name="exit-on-suspend" value="true"/>
     <preference name="android-installLocation" value="auto"/>
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />F
     
     <gap:plugin name="org.apache.cordova.dialogs"/>
     <gap:plugin name="org.apache.cordova.network-information"/>
