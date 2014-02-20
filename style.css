@@ -19,6 +19,9 @@
     background: #ae2d27 url(img/brilho-navbar.png) no-repeat center top;
     background-size: 100% 100%;
     height: 54px !important;
+    margin: 0 !important;padding: 0 !important;
+    border-bottom: none !important;
+    border-width: 0 !important;
 }
 .km-header .km-navbar{
     height: 54px !important;
@@ -46,7 +49,9 @@
 .right{float:right;}
 
 .button-menu{background: none !important;border: none !important;}
-.brilho-navbar{display: block;width: 100%;height: 100%;background: url(img/brilho-navbar.png) no-repeat center top;}
+.brilho-navbar{display: block;width: 100%;height: 100%;}
+
+#logo-correio{width: 44px; height: 44px;margin-top: 5px;}
 
 #menu .km-content{background-color: #511c0e !important;}
 #menu .km-group-title{display: none;}
@@ -74,6 +79,7 @@
 }
 
 #banner{background-color: #c3c3c3;}
+#banner .cycle-slideshow{width: 320px;height: 240px;margin: 0 auto;}
 
 #player{
     background-color: #000;
@@ -92,3 +98,5 @@
 #button-play:active{
     background-position: -106px 0;top: 73.5px;left: 1px;
 }
+
+#sobre-app .km-content{background-color: #fff !important;}
