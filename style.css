@@ -22,6 +22,8 @@
     margin: 0 !important;padding: 0 !important;
     border-bottom: none !important;
     border-width: 0 !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
 }
 .km-header .km-navbar{
     height: 54px !important;
@@ -29,6 +31,8 @@
     background: url(img/bg-navbar.png) no-repeat center top;
     border-bottom: none !important;
     border-width: 0 !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
     z-index: 1;
     position: relative;
 }
