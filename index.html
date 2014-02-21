@@ -12,7 +12,7 @@
         <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 
         <script type="text/javascript">
-            var IS_PHONEGAP = false;
+            var IS_PHONEGAP = true;
         </script>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
@@ -30,9 +30,9 @@
             <div id="player">
                 <script>
                     var screenWidth = $(window).width();
-                    console.log('tamnho tela: '+screenWidth);
+                    showAlert('tamnho tela: '+screenWidth);
                     var heightImage = (screenWidth * 720) / 425;
-                    console.log('tamnho imagem '+heightImage);
+                    showAlert('tamnho imagem '+heightImage);
                     $('#player').prepend('<img src="img/bg-player.jpg" width="' + screenWidth + '" height="' + heightImage + '" />');
                     var heightButtonPlay = (heightImage / 2) - (135/2);
                     $('#button-play').css('top', heightButtonPlay+'px');
@@ -65,6 +65,7 @@
         <div data-role="view" id="sobre-app" data-title="Sobre o APP" data-layout="tema" class="interna">
             <script>
                 var screenWidth = $(window).width() + 25;
+                showAlert('tamnho tela: '+screenWidth);
                 var heightImage = (screenWidth * 720) / 959;
                 $('#sobre-app').append('<img src="img/sobre-app.jpg" width="' + screenWidth + '" height="' + heightImage + '" />');
             </script>
@@ -80,7 +81,7 @@
                 <div data-role="navbar">
                     <div class="brilho-navbar">
                         <a data-role="button" class="button-menu" data-rel="drawer" href="#menu" data-icon="menu-icon" data-align="left"></a>
-                        <img id="logo-correio" src="img/logo-correio.svg" onerror="this.onerror=null; this.src='img/logo-correio.png'">
+                        <img id="logo-correio" src="img/logo-correio.png">
                         <img src="img/logo-hd.png" data-align="right" />
                     </div>
                 </div>
