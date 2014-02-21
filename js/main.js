@@ -1,5 +1,4 @@
 var app = null;
-var TIMEOUT = 10000;
 var devicePlatform = null;
 var config_streaming = null;
 
@@ -77,13 +76,8 @@ function exitFromApp(buttonIndex) {
     }
 }
 
-function exitFromAccount(buttonIndex) {
-    if (buttonIndex == 2) {
-        onLogout();
-    }
-}
-
 function onClickToPlayer() {
+    alert(devicePlataform);
     if (devicePlataform == 'Android')
         window.open(config_streaming.url.Android, '_system');
     else if (devicePlataform == 'iOS')
