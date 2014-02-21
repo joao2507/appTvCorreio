@@ -28,6 +28,13 @@
 
         <div data-role="view" id="aovivo" data-title="AoVivo" data-layout="tema">
             <div id="player">
+                <script>
+                    var screenWidth = $(window).width() + 25;
+                    var heightImage = (screenWidth * 720) / 425;
+                    $('#player').prepend('<img src="img/bg-player.jpg" width="' + screenWidth + '" height="' + heightImage + '" />');
+                    var heightButtonPlay = (heightImage / 2) - (135/2);
+                    $('#button-play').css('top', heightButtonPlay+'px');
+                </script>
                 <a id="button-play" data-role="button" data-click="onClickToPlayer" data-rel="external" target="_blank"></a>
             </div>
             <div id="banner">
@@ -55,9 +62,9 @@
 
         <div data-role="view" id="sobre-app" data-title="Sobre o APP" data-layout="tema" class="interna">
             <script>
-                var screenWidth = $(window).width()+25;
+                var screenWidth = $(window).width() + 25;
                 var heightImage = (screenWidth * 720) / 959;
-                $('#sobre-app').append('<img src="img/sobre-app.jpg" width="'+screenWidth+'" height="'+heightImage+'" />');
+                $('#sobre-app').append('<img src="img/sobre-app.jpg" width="' + screenWidth + '" height="' + heightImage + '" />');
             </script>
         </div>
 
