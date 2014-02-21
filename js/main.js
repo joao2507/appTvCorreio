@@ -1,5 +1,4 @@
 var app = null;
-var devicePlatform = null;
 var config_streaming = null;
 
 app = new kendo.mobile.Application($(document.body), {
@@ -9,7 +8,7 @@ app = new kendo.mobile.Application($(document.body), {
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-    devicePlatform = device.platform;
+    $('body').data('so',device.platform);
 
     spinnerplugin.show();
 
@@ -53,8 +52,7 @@ function onDeviceReady() {
                 'Não,Sim'
                 );
 
-    }
-    , false);
+    }, false);
 }
 
 function onOffline() {
@@ -78,13 +76,14 @@ function exitFromApp(buttonIndex) {
 
 function onClickToPlayer() {
     try {
-        if (devicePlataform == 'Android')
+        var so =$('body').data('so');
+        if (so == 'Android')
             window.open(config_streaming.url.Android, '_system');
-        else if (devicePlataform == 'iOS')
+        else if (so == 'iOS')
             window.open(config_streaming.url.iOS, '_system');
         return false;
     }
     catch (e) {
-        alert('Erro: ' + e.message)
+        alert('Erro: ' + e.message);
     }
 }
