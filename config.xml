@@ -52,6 +52,8 @@
     <gap:plugin name="org.apache.cordova.dialogs"/>
     <gap:plugin name="org.apache.cordova.network-information"/>
     
+    <gap:plugin name="com.phonegap.plugins.childbrowser" />
+    
     <access origin="*"/>
 
 </widget>
