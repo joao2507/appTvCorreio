@@ -77,10 +77,14 @@ function exitFromApp(buttonIndex) {
 }
 
 function onClickToPlayer() {
-    alert(devicePlataform);
-    if (devicePlataform == 'Android')
-        window.open(config_streaming.url.Android, '_system');
-    else if (devicePlataform == 'iOS')
-        window.open(config_streaming.url.iOS, '_system');
-    return false;
+    try {
+        if (devicePlataform == 'Android')
+            window.open(config_streaming.url.Android, '_system');
+        else if (devicePlataform == 'iOS')
+            window.open(config_streaming.url.iOS, '_system');
+        return false;
+    }
+    catch (e) {
+        alert('Erro: ' + e.message)
+    }
 }
