@@ -6,7 +6,6 @@ var config_streaming = null;
 app = new kendo.mobile.Application($(document.body), {
     skin: "flat"
 });
-app.showLoading();
 
 document.addEventListener("deviceready", onDeviceReady, false);
 $.ajax({
@@ -15,6 +14,7 @@ $.ajax({
     jsonpCallback: "load_config",
     cache: false,
     success: function(data) {
+        alert('configs carregadas');
         if (data.banner.itens.length > 0) {
             $('#banner > .banner').cycle({
                 fx: "scrollHorz",
@@ -27,11 +27,9 @@ $.ajax({
 
         }
         config_streaming = data.streaming;
-        app.hideLoading();
     },
-    error: function(){
+    error: function() {
         alert('Erro ao carregar as configurações do app');
-        app.hideLoading();
     }
 });
 
@@ -83,6 +81,7 @@ function exitFromAccount(buttonIndex) {
 }
 
 function onClickToPlayer() {
+    alert('click player');
     alert(devicePlataform);
     alert(config_streaming.url.Android);
 //    if(devicePlataform == 'Android')
