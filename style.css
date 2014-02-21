@@ -97,7 +97,12 @@
     display: block;
     width: 106px;height: 135px;
     margin: 0 auto;position: relative; top:62.5px;
-    background: url(img/sprite_play.png) no-repeat;
+    background: transparent url(img/sprite_play.png) no-repeat !important;
+    
+    border:none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    border-width: 0 !important;
 }
 #button-play:active{
     background-position: -106px 0;top: 63.5px;left: 1px;
