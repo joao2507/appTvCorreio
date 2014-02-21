@@ -101,9 +101,12 @@
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     border-width: 0 !important;
+    background-position: -106px 0;
 }
 #button-play:active{
-    background-position: -106px 0;top: 63.5px;left: 1px;
+    background-position: 0 0;top: 63.5px;left: 1px;
 }
 
 #sobre-app .km-content{background-color: #fff !important;}
+
+#bg-player{position: absolute;}

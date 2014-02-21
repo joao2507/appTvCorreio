@@ -31,11 +31,14 @@
                 <script>
                     var screenWidth = $(window).width();
                     var heightImage = (screenWidth * 425) / 720;
-                    $('#player').prepend('<img src="img/bg-player.jpg" width="' + screenWidth + '" height="' + heightImage + '" />');
+                    $('#player').prepend('<img id="bg-player" src="img/bg-player.jpg" width="' + screenWidth + '" height="' + heightImage + '" />');
+                    $('#player').css('height',heightImage+'px');
                     var heightButtonPlay = (heightImage / 2) - (135/2);
-                    $('#button-play').css('top', heightButtonPlay+'px');
+                    
+                    
+                    $('#player').append('<a id="button-play" data-role="button" data-click="onClickToPlayer" data-rel="external" target="_blank"></a>');
+                    $('#button-play').css('top', Math.floor(heightButtonPlay)+'px');
                 </script>
-                <a id="button-play" data-role="button" data-click="onClickToPlayer" data-rel="external" target="_blank"></a>
             </div>
             <div id="banner">
                 <div class="cycle-slideshow" data-fx="scrollHorz" data-timeout="7000">
