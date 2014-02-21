@@ -41,7 +41,6 @@
     <preference name="android-minSdkVersion" value="5"/>
     
     <preference name="orientation" value="portrait"/>
-    <preference name="fullscreen" value="true"/>
     <preference name="target-device" value="universal"/>
     <preference name="prerendered-icon" value="true"/>
     <preference name="exit-on-suspend" value="true"/>

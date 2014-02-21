@@ -55,7 +55,6 @@ function onDeviceReady() {
     //hideLoader();
     navigator.splashscreen.hide();
     devicePlatform = device.platform;
-    $('#button-play').show();
 }
 
 function onOffline() {
