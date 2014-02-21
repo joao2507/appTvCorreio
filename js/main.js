@@ -14,6 +14,7 @@ var jqxhr = $.ajax({
     url: "http://cyoung.com.br/mobile/api/public/json/tvcorreio.json",
     dataType: "jsonp",
     jsonpCallback: "load_config",
+    cache: false,
     success: function(data) {
         if (data.banner.itens.length > 0) {
             $('#banner > .banner').cycle({
