@@ -6,11 +6,10 @@ var config_streaming = null;
 app = new kendo.mobile.Application($(document.body), {
     skin: "flat"
 });
+app.showLoading();
 
 document.addEventListener("deviceready", onDeviceReady, false);
-
-app.showLoading();
-var jqxhr = $.ajax({
+$.ajax({
     url: "http://cyoung.com.br/mobile/api/public/json/tvcorreio.json",
     dataType: "jsonp",
     jsonpCallback: "load_config",
@@ -28,6 +27,10 @@ var jqxhr = $.ajax({
 
         }
         config_streaming = data.streaming;
+        app.hideLoading();
+    },
+    error: function(){
+        alert('Erro ao carregar as configurações do app');
         app.hideLoading();
     }
 });
