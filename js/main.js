@@ -34,6 +34,7 @@ $.ajax({
 });
 
 function onDeviceReady() {
+    devicePlatform = device.platform;
     //adicionar o evento online
     document.addEventListener("online", onOnline, false);
     //adicionar o evento offline
@@ -50,9 +51,6 @@ function onDeviceReady() {
 
     }
     , false);
-
-    navigator.splashscreen.hide();
-    devicePlatform = device.platform;
 }
 
 function onOffline() {
@@ -82,8 +80,7 @@ function exitFromAccount(buttonIndex) {
 
 function onClickToPlayer() {
     alert('click player');
-    //alert(devicePlataform);
-    alert(config_streaming.url.Android);
+    alert(devicePlatform);
 //    if(devicePlataform == 'Android')
 //        window.open(config_streaming.url.Android, '_system');
 //    else if(devicePlataform == 'iOS')
