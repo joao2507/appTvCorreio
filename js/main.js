@@ -3,15 +3,15 @@ var app = null;
 var TIMEOUT = 10000;
 
 app = new kendo.mobile.Application($(document.body), {
-    skin: "flat",transition: "slide"
+    skin: "flat"
 });
 
 
 function onLoad() {
-    if (isPhoneGap()) {
-        showLoader();
+    //if (isPhoneGap()) {
+        //showLoader();
         document.addEventListener("deviceready", onDeviceReady, false);
-    }
+    //}
 }
 
 // device APIs are available
@@ -23,9 +23,17 @@ function onDeviceReady() {
     document.addEventListener("offline", onOffline, false);
     //monitorar o click no backbutton
     document.addEventListener("backbutton", function(e) {
-        console.log('chamando o backbutton..'+page_id);
-        hideLoader();
-        var page_id = app.view().id;
+        //console.log('chamando o backbutton..'+page_id);
+        //hideLoader();
+        //var page_id = app.view().id;
+        
+        navigator.notification.confirm(
+                    'Você realmente deseja sair do aplicativo?',
+                    exitFromApp,
+                    'Sair',
+                    'Não,Sim'
+                    );
+        
         
 //        if (page_id == '/') {
 //            navigator.notification.confirm(
@@ -50,7 +58,7 @@ function onDeviceReady() {
 //        }
     }
     , false);
-    hideLoader();
+    //hideLoader();
 }
 
 function onOffline() {
@@ -58,8 +66,8 @@ function onOffline() {
 }
 
 function onOnline() {
-    $("#modal-alert").data("kendoMobileModalView").close();
-    hideLoader();
+    //$("#modal-alert").data("kendoMobileModalView").close();
+    //hideLoader();
 }
 
 function exitFromApp(buttonIndex) {
@@ -76,4 +84,13 @@ function exitFromAccount(buttonIndex) {
     if (buttonIndex == 2) {
         onLogout();
     }
+}
+
+function initAovivo(){
+    if(device.platform == 'Android'){
+        $('#player > iframe').attr('src', 'rtsp://174.37.99.198:1935/dvrid1816/1816');
+    }else if(device.platform == 'Android'){
+        $('#player > iframe').attr('src', 'http://174.37.99.198:1935/dvrid1816/1816/playlist.m3u8');
+    }
+
 }
