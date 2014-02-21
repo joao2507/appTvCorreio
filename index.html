@@ -31,7 +31,7 @@
                 <script>
                     var screenWidth = $(window).width();
                     showAlert('tamnho tela: '+screenWidth);
-                    var heightImage = (screenWidth * 720) / 425;
+                    var heightImage = (screenWidth * 425) / 720;
                     showAlert('tamnho imagem '+heightImage);
                     $('#player').prepend('<img src="img/bg-player.jpg" width="' + screenWidth + '" height="' + heightImage + '" />');
                     var heightButtonPlay = (heightImage / 2) - (135/2);
@@ -64,9 +64,9 @@
 
         <div data-role="view" id="sobre-app" data-title="Sobre o APP" data-layout="tema" class="interna">
             <script>
-                var screenWidth = $(window).width() + 25;
+                var screenWidth = $(window).width();
                 showAlert('tamnho tela: '+screenWidth);
-                var heightImage = (screenWidth * 720) / 959;
+                var heightImage = (screenWidth * 959) / 720;
                 $('#sobre-app').append('<img src="img/sobre-app.jpg" width="' + screenWidth + '" height="' + heightImage + '" />');
             </script>
         </div>
