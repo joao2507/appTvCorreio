@@ -87,6 +87,7 @@ function exitFromAccount(buttonIndex) {
 }
 
 function initAovivo(){
+    VideoPlayer.play("rtsp://174.37.99.198:1935/dvrid1816/1816");
 //    if(device.platform == 'Android'){
 //        $('#player > iframe').attr('src', 'rtsp://174.37.99.198:1935/dvrid1816/1816');
 //    }else if(device.platform == 'Android'){
