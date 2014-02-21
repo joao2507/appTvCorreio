@@ -89,14 +89,12 @@
     background-color: #000;
     position: relative;
     width: 100%;
-    height: 250px;
-    display: table;
 }
 
 #button-play{
     display: block;
     width: 106px;height: 135px;
-    margin: 0 auto;position: relative; top:62.5px;
+    margin: 0 auto;position: relative;
     background: transparent url(img/sprite_play.png) no-repeat !important;
     
     border:none !important;
