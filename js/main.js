@@ -9,7 +9,7 @@ app = new kendo.mobile.Application($(document.body), {
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
-
+app.showLoading();
 var jqxhr = $.ajax({
     url: "http://cyoung.com.br/mobile/api/public/json/tvcorreio.json",
     dataType: "jsonp",
@@ -28,6 +28,7 @@ var jqxhr = $.ajax({
 
         }
         config_streaming = data.streaming;
+        app.hideLoading();
     }
 });
 
@@ -79,7 +80,7 @@ function exitFromAccount(buttonIndex) {
 }
 
 function onClickToPlayer() {
-    alert(devicePlataform);
+    //alert(devicePlataform);
     alert(config_streaming.url.Android);
 //    if(devicePlataform == 'Android')
 //        window.open(config_streaming.url.Android, '_system');
