@@ -82,7 +82,6 @@ function exitFromAccount(buttonIndex) {
 }
 
 function onClickToPlayer(){
-    alert(devicePlatform);
     if(devicePlatform == 'Android'){
         window.open('rtsp://174.37.99.198:1935/dvrid1816/1816', '_system');
     }else if(devicePlatform == 'iOS'){
