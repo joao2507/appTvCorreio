@@ -88,13 +88,10 @@ function exitFromAccount(buttonIndex) {
 
 function onClickToPlayer(){
     window.open('rtsp://174.37.99.198:1935/dvrid1816/1816', '_system');
-    //VideoPlayer.play("");
-    //VideoPlayer.play("https://www.youtube.com/watch?v=24MGQQiKd8Q");
-    //showAlert('mopa');
-//    if(device.platform == 'Android'){
-//        $('#player > iframe').attr('src', 'rtsp://174.37.99.198:1935/dvrid1816/1816');
-//    }else if(device.platform == 'Android'){
-//        $('#player > iframe').attr('src', 'http://174.37.99.198:1935/dvrid1816/1816/playlist.m3u8');
-//    }
+    if(device.platform == 'Android'){
+        window.open('rtsp://174.37.99.198:1935/dvrid1816/1816', '_system');
+    }else if(device.platform == 'iOS'){
+        window.open('http://174.37.99.198:1935/dvrid1816/1816/playlist.m3u8', '_system');
+    }
     return false;
 }
