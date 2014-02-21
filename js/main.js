@@ -88,8 +88,8 @@ function exitFromAccount(buttonIndex) {
 
 function onClickToPlayer(){
     //VideoPlayer.play("rtsp://174.37.99.198:1935/dvrid1816/1816");
-    //VideoPlayer.play("https://www.youtube.com/watch?v=24MGQQiKd8Q");
-    showAlert('mopa');
+    VideoPlayer.play("https://www.youtube.com/watch?v=24MGQQiKd8Q");
+    //showAlert('mopa');
 //    if(device.platform == 'Android'){
 //        $('#player > iframe').attr('src', 'rtsp://174.37.99.198:1935/dvrid1816/1816');
 //    }else if(device.platform == 'Android'){
