@@ -7,17 +7,10 @@ app = new kendo.mobile.Application($(document.body), {
     skin: "flat"
 });
 
+document.addEventListener("deviceready", onDeviceReady, false);
 
-function onLoad() {
-    //if (isPhoneGap()) {
-        //showLoader();
-        document.addEventListener("deviceready", onDeviceReady, false);
-    //}
-}
-
-// device APIs are available
-//
 function onDeviceReady() {
+    alert('mopa');
     //adicionar o evento online
     document.addEventListener("online", onOnline, false);
     //adicionar o evento offline
