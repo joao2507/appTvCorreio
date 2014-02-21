@@ -1,15 +1,3 @@
-function initDropDown(container) {
-    // if (kendo.ui.DropDownList) {
-    //   $(container+" .dropdown").kendoDropDownList();
-    //}
-}
-
-function closeDropDown(container) {
-    //if (kendo.ui.DropDownList) {
-    //  $(container+" .dropdown").data("kendoDropDownList").close();
-    //}
-}
-
 function showAlert(texto) {
     if (isPhoneGap()) {
         navigator.notification.alert(
