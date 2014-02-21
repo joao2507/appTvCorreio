@@ -59,6 +59,7 @@ function onDeviceReady() {
     }
     , false);
     //hideLoader();
+    navigator.splashscreen.hide();
 }
 
 function onOffline() {
