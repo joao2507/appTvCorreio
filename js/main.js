@@ -7,39 +7,39 @@ app = new kendo.mobile.Application($(document.body), {
     skin: "flat"
 });
 
-window.plugins.spinnerDialog.show();
-
 document.addEventListener("deviceready", onDeviceReady, false);
-
-$.ajax({
-    url: "http://cyoung.com.br/mobile/api/public/json/tvcorreio.json",
-    dataType: "jsonp",
-    jsonpCallback: "load_config",
-    cache: false,
-    success: function(data) {
-        if (data.banner.itens.length > 0) {
-            $('#banner > .banner').cycle({
-                fx: "scrollHorz",
-                timeout: data.banner.timeout
-            });
-
-            $.each(data.banner.itens, function(i, item) {
-                $('#banner > .banner').cycle('add', '<img src="' + item + '">');
-            });
-
-        }
-        config_streaming = data.streaming;
-        window.plugins.spinnerDialog.hide();
-    },
-    error: function() {
-        alert('Erro ao carregar as configurações do app');
-        window.plugins.spinnerDialog.hide();
-    }
-});
 
 function onDeviceReady() {
     devicePlatform = device.platform;
-    
+
+    spinnerplugin.show();
+
+    $.ajax({
+        url: "http://cyoung.com.br/mobile/api/public/json/tvcorreio.json",
+        dataType: "jsonp",
+        jsonpCallback: "load_config",
+        cache: false,
+        success: function(data) {
+            if (data.banner.itens.length > 0) {
+                $('#banner > .banner').cycle({
+                    fx: "scrollHorz",
+                    timeout: data.banner.timeout
+                });
+
+                $.each(data.banner.itens, function(i, item) {
+                    $('#banner > .banner').cycle('add', '<img src="' + item + '">');
+                });
+
+            }
+            config_streaming = data.streaming;
+            spinnerplugin.hide();
+        },
+        error: function() {
+            alert('Erro ao carregar as configurações do app');
+            spinnerplugin.hide();
+        }
+    });
+
     //adicionar o evento online
     document.addEventListener("online", onOnline, false);
     //adicionar o evento offline
@@ -84,9 +84,9 @@ function exitFromAccount(buttonIndex) {
 }
 
 function onClickToPlayer() {
-    if(devicePlataform == 'Android')
+    if (devicePlataform == 'Android')
         window.open(config_streaming.url.Android, '_system');
-    else if(devicePlataform == 'iOS')
+    else if (devicePlataform == 'iOS')
         window.open(config_streaming.url.iOS, '_system');
     return false;
 }
