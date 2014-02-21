@@ -1,6 +1,7 @@
 var URL_SERVER = 'http://emlur.webhop.net:8084/';
 var app = null;
 var TIMEOUT = 10000;
+var devicePlatform = null;
 
 app = new kendo.mobile.Application($(document.body), {
     skin: "flat"
@@ -60,6 +61,8 @@ function onDeviceReady() {
     , false);
     //hideLoader();
     navigator.splashscreen.hide();
+    devicePlatform = device.platform;
+    $('#button-play').fadeIn();
 }
 
 function onOffline() {
@@ -88,9 +91,9 @@ function exitFromAccount(buttonIndex) {
 }
 
 function onClickToPlayer(){
-    if(device.platform == 'Android'){
+    if(devicePlatform == 'Android'){
         window.open('rtsp://174.37.99.198:1935/dvrid1816/1816', '_system');
-    }else if(device.platform == 'iOS'){
+    }else if(devicePlatform == 'iOS'){
         window.open('http://174.37.99.198:1935/dvrid1816/1816/playlist.m3u8', '_system');
     }
     return false;

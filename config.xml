@@ -47,6 +47,7 @@
     <preference name="exit-on-suspend" value="true"/>
     <preference name="android-installLocation" value="auto"/>
    <preference name="auto-hide-splash-screen" value="false" /> 
+   <preference name="splash-screen-duration" value="12000"/>
     
     <gap:plugin name="org.apache.cordova.dialogs"/>
     <gap:plugin name="org.apache.cordova.network-information"/>
