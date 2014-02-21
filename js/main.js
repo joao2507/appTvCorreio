@@ -8,20 +8,26 @@ app = new kendo.mobile.Application($(document.body), {
 });
 
 document.addEventListener("deviceready", onDeviceReady, false);
-$.getJSON("http://cyoung.com.br/mobile/api/public/json/tvcorreio.json", function(data) {
 
-    if (data.banner.itens.length > 0) {
-        $('#banner > .banner').cycle({
-            fx: "scrollHorz",
-            timeout: data.banner.timeout
-        });
 
-        $.each(data.banner.itens, function(i, item) {
-            $('#banner > .banner').cycle('add', '<img src="' + item + '">');
-        });
+var jqxhr = $.ajax({
+    url: "http://cyoung.com.br/mobile/api/public/json/tvcorreio.json",
+    dataType: "jsonp",
+    jsonpCallback: "load_config",
+    success: function(data) {
+        if (data.banner.itens.length > 0) {
+            $('#banner > .banner').cycle({
+                fx: "scrollHorz",
+                timeout: data.banner.timeout
+            });
 
+            $.each(data.banner.itens, function(i, item) {
+                $('#banner > .banner').cycle('add', '<img src="' + item + '">');
+            });
+
+        }
+        config_streaming = data.streaming;
     }
-    config_streaming = data.streaming;
 });
 
 function onDeviceReady() {

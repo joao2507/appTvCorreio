@@ -1,4 +1,4 @@
-{
+load_config({
     "streaming": {
         "url": {
             "Android": "rtsp://174.37.99.198:1935/dvrid1816/1816",
@@ -13,4 +13,4 @@
             "http://cyoung.com.br/mobile/api/public/banners/tvcorreio/320x240-03.jpg"
         ]
     }
-}
+})
