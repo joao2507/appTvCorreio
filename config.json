@@ -1,0 +1,16 @@
+{
+    "streaming": {
+        "url": {
+            "Android": "rtsp://174.37.99.198:1935/dvrid1816/1816",
+            "iOS": "http://174.37.99.198:1935/dvrid1816/1816/playlist.m3u8"
+        }
+    },
+    "banner": {
+        "timeout": 7000,
+        "itens": [
+            "http://cyoung.com.br/mobile/api/public/banners/tvcorreio/320x240-01.jpg",
+            "http://cyoung.com.br/mobile/api/public/banners/tvcorreio/320x240-02.jpg",
+            "http://cyoung.com.br/mobile/api/public/banners/tvcorreio/320x240-03.jpg"
+        ]
+    }
+}

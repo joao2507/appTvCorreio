@@ -82,8 +82,8 @@
     margin-bottom: 0 !important;
 }
 
-#banner{background-color: #c3c3c3;}
-#banner .cycle-slideshow{width: 320px;height: 240px;margin: 0 auto;}
+#banner{background-color: #000;}
+#banner .banner{width: 320px;height: 240px;margin: 0 auto;}
 
 #player{
     background-color: #000;
@@ -110,3 +110,5 @@
 #sobre-app .km-content{background-color: #fff !important;}
 
 #bg-player{position: absolute;}
+
+.aovivo .km-content{background-color: #000 !important;}

@@ -1,13 +1,28 @@
-var URL_SERVER = 'http://emlur.webhop.net:8084/';
 var app = null;
 var TIMEOUT = 10000;
 var devicePlatform = null;
+var config_streaming = null;
 
 app = new kendo.mobile.Application($(document.body), {
     skin: "flat"
 });
 
 document.addEventListener("deviceready", onDeviceReady, false);
+$.getJSON("config.json", function(data) {
+    console.log(data);
+    if (data.banner.itens.length > 0) {
+        $('#banner > .banner').cycle({
+            fx: "scrollHorz",
+            timeout: data.banner.timeout
+        });
+
+        $.each(data.banner.itens, function(i, item) {
+            $('#banner > .banner').cycle('add', '<img src="' + item + '">');
+        });
+
+    }
+    config_streaming = data.streaming;
+});
 
 function onDeviceReady() {
     //adicionar o evento online
@@ -16,42 +31,17 @@ function onDeviceReady() {
     document.addEventListener("offline", onOffline, false);
     //monitorar o click no backbutton
     document.addEventListener("backbutton", function(e) {
-        //console.log('chamando o backbutton..'+page_id);
-        //hideLoader();
-        //var page_id = app.view().id;
-        
+
         navigator.notification.confirm(
-                    'Você realmente deseja sair do aplicativo?',
-                    exitFromApp,
-                    'Sair',
-                    'Não,Sim'
-                    );
-        
-        
-//        if (page_id == '/') {
-//            navigator.notification.confirm(
-//                    'Você realmente deseja sair do aplicativo?',
-//                    exitFromApp,
-//                    'Sair',
-//                    'Não,Sim'
-//                    );
-//        } else if (page_id == '#inicio') {
-//            navigator.notification.confirm(
-//                    'Você realmente deseja se deslogar da sua conta?',
-//                    exitFromAccount,
-//                    'Sair',
-//                    'Não,Sim'
-//                    );
-//        } else if (page_id == '#login' || page_id == '#registro-conta') {
-//            app.navigate('#intro');
-//        }
-//        else {
-//            e.preventDefault();
-//            navigator.app.backHistory();
-//        }
+                'Você realmente deseja sair do aplicativo?',
+                exitFromApp,
+                'Sair',
+                'Não,Sim'
+                );
+
     }
     , false);
-    //hideLoader();
+
     navigator.splashscreen.hide();
     devicePlatform = device.platform;
 }
@@ -81,11 +71,7 @@ function exitFromAccount(buttonIndex) {
     }
 }
 
-function onClickToPlayer(){
-    if(devicePlatform == 'Android'){
-        window.open('rtsp://174.37.99.198:1935/dvrid1816/1816', '_system');
-    }else if(devicePlatform == 'iOS'){
-        window.open('http://174.37.99.198:1935/dvrid1816/1816/playlist.m3u8', '_system');
-    }
+function onClickToPlayer() {
+    window.open(config_streaming.url.devicePlatform, '_system');
     return false;
 }
