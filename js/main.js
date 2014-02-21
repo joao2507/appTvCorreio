@@ -79,7 +79,9 @@ function exitFromAccount(buttonIndex) {
 }
 
 function onClickToPlayer() {
-    alert(config_streaming.url.devicePlatform);
-    window.open(config_streaming.url.devicePlatform, '_system');
+    if(devicePlataform == 'Android')
+        window.open(config_streaming.url.Android, '_system');
+    else if(devicePlataform == 'iOS')
+        window.open(config_streaming.url.iOS, '_system');
     return false;
 }
