@@ -72,6 +72,7 @@ function exitFromAccount(buttonIndex) {
 }
 
 function onClickToPlayer() {
+    alert(config_streaming.url.devicePlatform);
     window.open(config_streaming.url.devicePlatform, '_system');
     return false;
 }
