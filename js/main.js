@@ -82,7 +82,7 @@ function exitFromAccount(buttonIndex) {
 
 function onClickToPlayer() {
     alert('click player');
-    alert(devicePlataform);
+    //alert(devicePlataform);
     alert(config_streaming.url.Android);
 //    if(devicePlataform == 'Android')
 //        window.open(config_streaming.url.Android, '_system');
