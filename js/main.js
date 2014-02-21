@@ -7,7 +7,10 @@ app = new kendo.mobile.Application($(document.body), {
     skin: "flat"
 });
 
+window.plugins.spinnerDialog.show();
+
 document.addEventListener("deviceready", onDeviceReady, false);
+
 $.ajax({
     url: "http://cyoung.com.br/mobile/api/public/json/tvcorreio.json",
     dataType: "jsonp",
@@ -36,7 +39,7 @@ $.ajax({
 
 function onDeviceReady() {
     devicePlatform = device.platform;
-    window.plugins.spinnerDialog.show();
+    
     //adicionar o evento online
     document.addEventListener("online", onOnline, false);
     //adicionar o evento offline
