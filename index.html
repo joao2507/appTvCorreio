@@ -29,8 +29,10 @@
         <div data-role="view" id="aovivo" data-title="AoVivo" data-layout="tema">
             <div id="player">
                 <script>
-                    var screenWidth = $(window).width() + 25;
+                    var screenWidth = $(window).width();
+                    console.log('tamnho tela: '+screenWidth);
                     var heightImage = (screenWidth * 720) / 425;
+                    console.log('tamnho imagem '+heightImage);
                     $('#player').prepend('<img src="img/bg-player.jpg" width="' + screenWidth + '" height="' + heightImage + '" />');
                     var heightButtonPlay = (heightImage / 2) - (135/2);
                     $('#button-play').css('top', heightButtonPlay+'px');
