@@ -24,16 +24,6 @@ function showAlertComTitulo(titulo, texto) {
     }
 }
 
-function dataSource_error(e) {
-    hideLoader();
-
-    if (isPhoneGap())
-        navigator.app.backHistory();
-    else
-        history.go(-1);
-    showAlert('Não foi possível conectar ao servidor, por favor, tente novamente.');
-}
-
 function isPhoneGap() {
     return IS_PHONEGAP;
 }
