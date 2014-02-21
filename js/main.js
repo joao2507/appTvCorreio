@@ -14,7 +14,6 @@ $.ajax({
     jsonpCallback: "load_config",
     cache: false,
     success: function(data) {
-        alert('configs carregadas');
         if (data.banner.itens.length > 0) {
             $('#banner > .banner').cycle({
                 fx: "scrollHorz",
@@ -27,14 +26,17 @@ $.ajax({
 
         }
         config_streaming = data.streaming;
+        window.plugins.spinnerDialog.hide();
     },
     error: function() {
         alert('Erro ao carregar as configurações do app');
+        window.plugins.spinnerDialog.hide();
     }
 });
 
 function onDeviceReady() {
     devicePlatform = device.platform;
+    window.plugins.spinnerDialog.show();
     //adicionar o evento online
     document.addEventListener("online", onOnline, false);
     //adicionar o evento offline
