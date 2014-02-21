@@ -8,8 +8,8 @@ app = new kendo.mobile.Application($(document.body), {
 });
 
 document.addEventListener("deviceready", onDeviceReady, false);
-$.getJSON("config.json", function(data) {
-    console.log(data);
+$.getJSON("http://cyoung.com.br/mobile/api/public/json/tvcorreio.json", function(data) {
+
     if (data.banner.itens.length > 0) {
         $('#banner > .banner').cycle({
             fx: "scrollHorz",
