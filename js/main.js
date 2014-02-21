@@ -10,7 +10,6 @@ app = new kendo.mobile.Application($(document.body), {
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-    alert('mopa');
     //adicionar o evento online
     document.addEventListener("online", onOnline, false);
     //adicionar o evento offline
@@ -83,6 +82,7 @@ function exitFromAccount(buttonIndex) {
 }
 
 function onClickToPlayer(){
+    alert(devicePlatform);
     if(devicePlatform == 'Android'){
         window.open('rtsp://174.37.99.198:1935/dvrid1816/1816', '_system');
     }else if(devicePlatform == 'iOS'){
