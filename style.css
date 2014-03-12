@@ -1,5 +1,5 @@
 *{font-family: 'PT Sans', sans-serif !important;}
-
+html{background-color: #000;}
 @font-face {
     font-family: "IconsBossa1";
     src: url("img/fonts/icon-menu/font/icons.woff") format("woff"),
