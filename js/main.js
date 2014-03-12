@@ -80,7 +80,7 @@ function onClickToPlayer() {
         if (so == 'Android')
             window.open(config_streaming.url.Android, '_system');
         else if (so == 'iOS'){
-            window.open('http://www.uol.com.br');
+            window.open(config_streaming.url.iOS);
             //$('#player').html('<video src="'+config_streaming.url.iOS+'"></video>');
         }
         return false;
