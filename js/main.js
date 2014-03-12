@@ -79,8 +79,10 @@ function onClickToPlayer() {
         var so =$('body').data('so');
         if (so == 'Android')
             window.open(config_streaming.url.Android, '_system');
-        else if (so == 'iOS')
-            window.open(config_streaming.url.iOS, '_system');
+        else if (so == 'iOS'){
+            //window.open(config_streaming.url.iOS, '_system');
+            $('#player').html('<video src="'+config_streaming.url.iOS+'"></video>');
+        }
         return false;
     }
     catch (e) {
